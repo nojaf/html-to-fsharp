@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net461</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HtmlToGiraffe.Engine\HtmlToGiraffe.Engine.fsproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Reflection.fs" />  
+    <Compile Include="Tests.fs" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.DotNet.Watcher.Tools" Version="2.0.0" />
+    <Reference Include="FSharp.Data, Version=2.4.3.0, Culture=neutral, PublicKeyToken=null">
+      <HintPath>..\..\lib\FSharp.Data.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Import Project="..\fsc.props" />
+  <Import Project="..\..\.paket\Paket.Restore.targets" />
+</Project>

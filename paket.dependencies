@@ -1,0 +1,8 @@
+source https://www.nuget.org/api/v2
+nuget FSharp.Compiler.Service 17.0.1
+nuget FSharp.Core
+nuget Giraffe 0.1.0-beta-200 beta
+nuget Microsoft.DotNet.Watcher.Tools 2.0.0
+nuget Microsoft.NET.Test.Sdk 15.3.0-preview-20170628-02 preview
+nuget xunit 2.2.0
+nuget xunit.runner.visualstudio 2.2.0
