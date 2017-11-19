@@ -5,3 +5,4 @@ FSharp.Core
 Giraffe
 FSharp.Compiler.Service
 Newtonsoft.Json
+Microsoft.DotNet.Watcher.Tools

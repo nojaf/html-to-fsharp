@@ -1,0 +1,54 @@
+// Colors
+$primary: #32995f
+
+@import '../node_modules/bulma/bulma'
+
+.logo
+    background: white
+    padding: 30px
+    margin-bottom: 15px
+    display: inline-block
+
+.logo img
+    width: 150px
+
+#title-container
+    .title
+        margin-top: 70px
+
+#elmish-app
+    margin-top: 30px
+
+
+#settings
+    margin-top: auto
+    margin-bottom: 23px
+    .button
+        margin-bottom: 5px
+        width: 100%
+
+code
+    padding: 0
+    margin-top: 30px
+    pre
+        color: #0E0E0E
+
+.textarea:not([rows])
+    min-height: 300px
+
+@keyframes fadeInOut
+    0%
+        opacity: 0
+    15%
+        opacity: 1
+    85%
+        opacity: 1
+    100%
+        opacity: 0
+
+#copied
+    animation: fadeInOut 2s
+    animation-fill-mode: forwards
+
+#push
+    height: 23px

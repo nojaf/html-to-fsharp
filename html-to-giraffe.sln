@@ -14,6 +14,8 @@ Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HtmlToGiraffe.Engine", "src
 EndProject
 Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HtmlToGiraffe.Tests", "src\HtmlToGiraffe.Tests\HtmlToGiraffe.Tests.fsproj", "{0AAD5D06-86C0-434C-B5DF-03A4D318185D}"
 EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HtmlToGiraffe.Web", "src\HtmlToGiraffe.Web\HtmlToGiraffe.Web.fsproj", "{44030C67-E55C-478B-872B-D3519772D4FC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,9 +53,22 @@ Global
 		{0AAD5D06-86C0-434C-B5DF-03A4D318185D}.Release|x64.Build.0 = Release|x64
 		{0AAD5D06-86C0-434C-B5DF-03A4D318185D}.Release|x86.ActiveCfg = Release|x86
 		{0AAD5D06-86C0-434C-B5DF-03A4D318185D}.Release|x86.Build.0 = Release|x86
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Debug|x64.ActiveCfg = Debug|x64
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Debug|x64.Build.0 = Debug|x64
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Debug|x86.ActiveCfg = Debug|x86
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Debug|x86.Build.0 = Debug|x86
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Release|x64.ActiveCfg = Release|x64
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Release|x64.Build.0 = Release|x64
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Release|x86.ActiveCfg = Release|x86
+		{44030C67-E55C-478B-872B-D3519772D4FC}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{6ED9260F-3E91-47C1-9115-2C5AA4A522CD} = {874DC16C-8D46-4409-AB35-8C9531EA0409}
 		{0AAD5D06-86C0-434C-B5DF-03A4D318185D} = {874DC16C-8D46-4409-AB35-8C9531EA0409}
+		{44030C67-E55C-478B-872B-D3519772D4FC} = {874DC16C-8D46-4409-AB35-8C9531EA0409}
 	EndGlobalSection
 EndGlobal
