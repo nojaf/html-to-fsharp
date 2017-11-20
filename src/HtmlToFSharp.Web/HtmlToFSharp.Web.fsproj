@@ -17,6 +17,9 @@
     <Content Include="wwwroot/*.*">
       <CopyToPublishDirectory>Always</CopyToPublishDirectory>
     </Content>
+    <Content Include="web.config">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Data, Version=2.4.3.0, Culture=neutral, PublicKeyToken=null">
