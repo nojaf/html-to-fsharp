@@ -70,7 +70,7 @@ let update msg model =
         Output = result
       }, Cmd.none
   | TransformFailed ex ->
-    { model with TransformFailed = Some true}, Cmd.none
+    { model with TransformFailed = Some true; Output = String.Empty}, Cmd.none
   | CopyToClipboard ->
     model, Cmd.ofSub (copyToClipboard model.Output)
   | Copied ->

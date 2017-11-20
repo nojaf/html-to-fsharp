@@ -14,6 +14,32 @@ open Fable.Helpers.React
 open Props
 open Form
 open System
+open Elmish.React
+open Fulma.BulmaClasses.Bulma
+
+let headerHero (model:Model) dispatch =
+    Hero.hero [Hero.isDark;Hero.isPrimary] [
+        Hero.body [] [
+            Container.container [] [
+                Columns.columns [] [
+                    Column.column [Column.props [Id "title-container"]] [
+                        Heading.h1 [Heading.customClass "is-inline-block"] [str "Html to"]
+                        Select.select [Select.customClass "is-inline-block"] [
+                            select [] [
+                                option [Value "Giraffe";] [str "Giraffe"]
+                            ]
+                        ]
+                        Heading.p [Heading.isSubtitle] [ str "a nojaf tool"]
+                    ]
+                    Column.column [Column.customClass "has-text-right"] [
+                        div [ClassName "logo"] [
+                            img [Src "https://raw.githubusercontent.com/dustinmoris/Giraffe/develop/giraffe.png"]
+                        ]
+                    ]
+                ]
+            ]
+        ]
+    ]
 
 let inputColumn model dispatch =
     let updateInput (ev:FormEvent) =
@@ -84,7 +110,27 @@ let outputColumn model dispatch =
         copiedLabel
     ]
 
-let root (model:Model) (dispatch:Dispatch<Msg>) =
+let showError (model:Model) =
+    let error =
+        match model.TransformFailed with
+        | None -> None
+        | Some(false) -> None
+        | Some(true) -> 
+            Notification.notification [ Notification.isDanger ] [
+                str "The html couldn't be parsed! Please check if it is valid or "
+                a [Href "http://github.com/nojaf/html-to-fsharp/issues"; Target "_blank"] [str "report an issue"]
+            ] |> Some
+
+
+    Columns.columns [] [
+        Column.column [Column.Width.isHalf] []
+        Column.column [] []
+        Column.column [Column.Width.isHalf] [
+            opt error
+        ]
+    ]
+
+let app (model:Model) dispatch =
     Container.container [] [
         Content.content [] [
             Columns.columns [] [
@@ -92,10 +138,16 @@ let root (model:Model) (dispatch:Dispatch<Msg>) =
                 settingsColumn model dispatch
                 outputColumn model dispatch
             ]
+            showError model
         ]
     ]
 
-open Elmish.React
+let root (model:Model) (dispatch:Dispatch<Msg>) =
+    div [] [
+        headerHero model dispatch
+        app model dispatch
+    ]
+
 open Elmish.Debug
 open Elmish.HMR
 

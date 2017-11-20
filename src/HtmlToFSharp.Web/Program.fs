@@ -62,7 +62,7 @@ let webApp =
     choose [
         GET >=>
             choose [
-                route "/" >=> htmlFile "./index.html"
+                route "/" >=> htmlFile "./wwwroot/index.html"
             ]
         POST >=>
             choose [
