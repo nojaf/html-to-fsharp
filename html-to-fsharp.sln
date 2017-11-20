@@ -10,11 +10,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".paket", ".paket", "{898C09
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{874DC16C-8D46-4409-AB35-8C9531EA0409}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HtmlToGiraffe.Engine", "src\HtmlToGiraffe.Engine\HtmlToGiraffe.Engine.fsproj", "{6ED9260F-3E91-47C1-9115-2C5AA4A522CD}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HtmlToFSharp.Engine", "src\HtmlToFSharp.Engine\HtmlToFSharp.Engine.fsproj", "{6ED9260F-3E91-47C1-9115-2C5AA4A522CD}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HtmlToGiraffe.Tests", "src\HtmlToGiraffe.Tests\HtmlToGiraffe.Tests.fsproj", "{0AAD5D06-86C0-434C-B5DF-03A4D318185D}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HtmlToFSharp.Tests", "src\HtmlToFSharp.Tests\HtmlToFSharp.Tests.fsproj", "{0AAD5D06-86C0-434C-B5DF-03A4D318185D}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HtmlToGiraffe.Web", "src\HtmlToGiraffe.Web\HtmlToGiraffe.Web.fsproj", "{44030C67-E55C-478B-872B-D3519772D4FC}"
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "HtmlToFSharp.Web", "src\HtmlToFSharp.Web\HtmlToFSharp.Web.fsproj", "{44030C67-E55C-478B-872B-D3519772D4FC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

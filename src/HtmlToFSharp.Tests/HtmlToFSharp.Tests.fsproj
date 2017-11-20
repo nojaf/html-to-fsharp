@@ -4,7 +4,7 @@
     <TargetFramework>net461</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HtmlToGiraffe.Engine\HtmlToGiraffe.Engine.fsproj" />
+    <ProjectReference Include="..\HtmlToFSharp.Engine\HtmlToFSharp.Engine.fsproj" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Reflection.fs" />

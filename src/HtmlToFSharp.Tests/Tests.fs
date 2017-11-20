@@ -2,7 +2,7 @@ module Tests
 
 open System
 open Xunit
-open HtmlToGiraffe.Engine
+open HtmlToFSharp.Engine
 open Giraffe.XmlViewEngine
 open Reflection
 

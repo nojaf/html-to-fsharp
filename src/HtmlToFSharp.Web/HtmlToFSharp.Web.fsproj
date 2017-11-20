@@ -4,9 +4,9 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <DebugType>portable</DebugType>
-    <AssemblyName>HtmlToGiraffe_Web</AssemblyName>
+    <AssemblyName>HtmlToFSharp_Web</AssemblyName>
     <OutputType>Exe</OutputType>
-    <PackageId>HtmlToGiraffe_Web</PackageId>
+    <PackageId>HtmlToFSharp_Web</PackageId>
     <RuntimeFrameworkVersion>2.0.0</RuntimeFrameworkVersion>
     <EnableDefaultContentItems>false</EnableDefaultContentItems>
   </PropertyGroup>
@@ -22,7 +22,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\HtmlToGiraffe.Engine\HtmlToGiraffe.Engine.fsproj" />
+    <ProjectReference Include="..\HtmlToFSharp.Engine\HtmlToFSharp.Engine.fsproj" />
   </ItemGroup>
   <Import Project="..\..\.paket\Paket.Restore.targets" />
 </Project>

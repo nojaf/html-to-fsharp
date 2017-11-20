@@ -1,4 +1,4 @@
-module HtmlToGiraffe_Web.App
+module HtmlToFSharp_Web.App
 
 open System
 open System.IO
@@ -13,7 +13,7 @@ open Giraffe.HttpHandlers
 open Giraffe.Middleware
 open Giraffe
 open FSharp.Data
-open HtmlToGiraffe.Engine
+open HtmlToFSharp.Engine
 
 type TransformModel = JsonProvider<"""
 {

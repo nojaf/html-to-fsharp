@@ -1,4 +1,4 @@
-module HtmlToGiraffe.Engine
+module HtmlToFSharp.Engine
 
 open FSharp.Data
 open System
@@ -169,9 +169,6 @@ let rec processHtmlNode (indentLevel:int) (node:HtmlNode) =
     let ownIndentation = getIndentation indentLevel
     let parseChildren (nodes:HtmlNode list) =
         fun () ->
-            let childrenIndentation =  
-                (+) indentLevel 1 |> getIndentation
-
             nodes
             |> List.map (processHtmlNode ((+) indentLevel 1))
             |> fun htmls -> String.Join(newLine, htmls)
@@ -181,9 +178,9 @@ let rec processHtmlNode (indentLevel:int) (node:HtmlNode) =
     match node with
     | HtmlElement(name, attributes, elements) when (isKnownTagFunction name) ->
         parseHtmlTag attributes (parseChildren elements) name
-    | HtmlElement(name, attributes, elements) when (name = "base") ->
+    | HtmlElement(name, attributes, _) when (name = "base") ->
         parseHtmlTag attributes noChildren "``base``"
-    | HtmlElement(name, attributes, elements) when (isKnownVoidFunction name) ->
+    | HtmlElement(name, attributes, _) when (isKnownVoidFunction name) ->
          parseHtmlTag attributes noChildren name
     | HtmlElement(name, attributes, elements) ->
         parseUnknownTag name attributes elements parseChildren
@@ -193,7 +190,7 @@ let rec processHtmlNode (indentLevel:int) (node:HtmlNode) =
         sprintf "encodedText \"%s\"" content
     | HtmlComment content -> 
         sprintf "comment  \"%s\"" content
-    | HtmlCData content ->
+    | HtmlCData _ ->
         "CData is deprecated in HTML5"
     |> sprintf "%s%s" ownIndentation
     
