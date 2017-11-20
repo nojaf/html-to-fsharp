@@ -4,7 +4,7 @@
   <PropertyGroup>
     <TargetFramework>net461</TargetFramework>
     <DebugType>portable</DebugType>
-    <AssemblyName>HtmlToFSharp_Web</AssemblyName>
+    <AssemblyName>html-to-fsharp-web</AssemblyName>
     <OutputType>Exe</OutputType>
     <PackageId>HtmlToFSharp_Web</PackageId>
     <RuntimeFrameworkVersion>2.0.0</RuntimeFrameworkVersion>
@@ -14,7 +14,9 @@
     <Compile Include="Program.fs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="wwwroot\index.html" />
+    <Content Include="wwwroot/*.*">
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Reference Include="FSharp.Data, Version=2.4.3.0, Culture=neutral, PublicKeyToken=null">
