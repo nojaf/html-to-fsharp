@@ -16,3 +16,4 @@ nuget xunit.runner.visualstudio 2.2.0
 nuget Microsoft.Extensions.DependencyInjection >= 2.0.0
 nuget Microsoft.Extensions.Logging.Console >= 2.0.0
 nuget Microsoft.Extensions.Logging.Debug >= 2.0.0
+nuget FAKE
