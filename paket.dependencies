@@ -8,7 +8,7 @@ nuget Microsoft.AspNetCore.Hosting >= 2.0.0
 nuget Microsoft.AspNetCore.Diagnostics >= 2.0.0
 nuget Microsoft.AspNetCore.Cors >= 2.0.0
 nuget Microsoft.AspNetCore.Authentication.Cookies >= 2.0.0
-nuget Giraffe 0.1.0-beta-300 beta
+nuget Giraffe
 clitool Microsoft.DotNet.Watcher.Tools 2.0.0
 nuget Microsoft.NET.Test.Sdk 15.3.0-preview-20170628-02 preview
 nuget xunit 2.2.0

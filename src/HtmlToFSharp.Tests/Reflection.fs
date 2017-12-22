@@ -5,7 +5,7 @@ open Microsoft.FSharp.Compiler.Interactive.Shell
 open System
 open System.IO
 open System.Text
-open Giraffe.XmlViewEngine
+open Giraffe.GiraffeViewEngine
 open Newtonsoft.Json
 
 // Intialize output and input streams
@@ -24,7 +24,7 @@ let fsiSession = FsiEvaluationSession.Create(fsiConfig, allArgs, inStream, outSt
 
 fsiSession.EvalInteractionNonThrowing("#I __SOURCE_DIRECTORY__") |> ignore
 fsiSession.EvalInteractionNonThrowing("#r \"../../../../../packages/Giraffe/lib/net461/Giraffe.dll\"") |> ignore
-fsiSession.EvalInteractionNonThrowing("open Giraffe.XmlViewEngine") |> ignore
+fsiSession.EvalInteractionNonThrowing("open Giraffe.GiraffeViewEngine") |> ignore
 
 (*
 Error Message:

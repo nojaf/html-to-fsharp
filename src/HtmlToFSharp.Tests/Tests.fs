@@ -2,8 +2,8 @@ module Tests
 
 open System
 open Xunit
-open HtmlToFSharp.Engine
-open Giraffe.XmlViewEngine
+open HtmlToFSharp.Engine.Main
+open Giraffe.GiraffeViewEngine
 open Reflection
 
 let stripNewLines (html:string) =
@@ -205,3 +205,23 @@ let ``Bootstrap starter kit`` () =
     </html>
     """
     |> parseToGiraffeAndBack
+    
+[<Fact>]
+let ``known key value attribute`` () =
+    "<link href=\"./style.css\" rel=\"stylesheet\">"
+    |> parseToGiraffeAndBack
+    
+[<Fact>]
+let ``custom key value attribute`` () =
+    "<div data-root=\"~\"></div>"
+    |> parseToGiraffeAndBack
+    
+[<Fact>]
+let ``known flag attribute`` () =
+    "<script async></script>"
+    |> parseToGiraffeAndBack
+    
+[<Fact>]
+let ``custom flag attribute`` () =
+    "<p data-pelican></p>"
+    |> parseToGiraffe    

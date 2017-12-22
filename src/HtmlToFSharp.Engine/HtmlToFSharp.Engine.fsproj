@@ -5,6 +5,8 @@
     <TargetFramework>net461</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Attributes.fs" />
+    <Compile Include="Tags.fs" />
     <Compile Include="Engine.fs" />
   </ItemGroup>
   <ItemGroup>

@@ -13,7 +13,7 @@ open Giraffe.HttpHandlers
 open Giraffe.Middleware
 open Giraffe
 open FSharp.Data
-open HtmlToFSharp.Engine
+open HtmlToFSharp.Engine.Main
 
 type TransformModel = JsonProvider<"""
 {
@@ -34,7 +34,7 @@ let addGiraffeReferences (parsedHtml:string list) =
     
     printfn "%s" htmlFns
 
-    let openStatement = "open Giraffe.XmlViewEngine"
+    let openStatement = "open Giraffe.GiraffeViewEngine"
     let tempFn = "let myHtml ="
     
     String.Concat(
@@ -48,14 +48,14 @@ let addGiraffeReferences (parsedHtml:string list) =
     
 let transformHandler next (ctx:HttpContext) =
     task {
-        let! body = ctx.ReadBodyFromRequest()
+        let! body = ctx.ReadBodyFromRequestAsync()
         let model = TransformModel.Parse(body)
         let giraffeCode = 
             parseHtmlString model.Content
             |> List.map (processRootHtmlNode)
             |> addGiraffeReferences
         
-        return! ctx.WriteText giraffeCode
+        return! ctx.WriteTextAsync giraffeCode
     }
 
 let webApp =
